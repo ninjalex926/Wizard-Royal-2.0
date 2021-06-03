@@ -9,6 +9,8 @@ public class PlayerStats : MonoBehaviour
 
     public Mana_Bar manabar;
 
+    [SerializeField] private GameManager gameManager;
+
     public int maxHealth;
         public int currentPlayerHealth;
 
@@ -53,5 +55,6 @@ public class PlayerStats : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        gameManager.LoadLevel("TestScene");
     }
 }
