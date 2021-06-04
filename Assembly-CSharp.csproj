@@ -101,9 +101,11 @@
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Monitors\VectorscopeMonitor.cs" />
     <Compile Include="Assets\Scripts\Mana_Bar.cs" />
     <Compile Include="Assets\Scripts\Raycast Shooting Scripts\ShootableBox.cs" />
+    <Compile Include="Assets\Scripts\EnvironmentDamage.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Monitors\Monitor.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\PostProcessEffectRenderer.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Effects\ScalableAO.cs" />
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\Scripts\Sample Example Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Utils\TextureFormatUtilities.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Utils\MeshUtilities.cs" />
@@ -132,20 +134,18 @@
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\PostProcessManager.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Attributes\MaxAttribute.cs" />
     <Compile Include="Assets\Scripts\VFX Scripts\Fireball.cs" />
+    <Compile Include="Assets\QuitGame.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Utils\PropertySheetFactory.cs" />
+    <Compile Include="Assets\MainMenuBehavior.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\ParameterOverride.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\PostProcessBundle.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Effects\MultiScaleVO.cs" />
     <Compile Include="Assets\Scripts\VFX Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\SpellStats.cs" />
     <Compile Include="Assets\Scripts\B Raycasting Scripts\Target.cs" />
-    <Compile Include="Assets\GameManager.cs" />
-    <Compile Include="Assets\MainMenuBehavior.cs" />
-    <Compile Include="Assets\QuitGame.cs" />
-    <Compile Include="Assets\Scripts\EnvironmentDamage.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\PinwheelFantasyEffect\README.txt" />
+     <None Include="Assets\VFX\PinwheelFantasyEffect\README.txt" />
      <None Include="Assets\Font\OFL.txt" />
     <Reference Include="UnityEngine">
       <HintPath>F:\2020.1.2f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
