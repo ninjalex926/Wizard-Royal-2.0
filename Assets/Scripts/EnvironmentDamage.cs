@@ -15,7 +15,7 @@ using UnityEngine;
 // PlayerScript requires the GameObject to have a Rigidbody component
 [RequireComponent(typeof(Collider))]
 
-public class EnvironmentDamage : MonoBehaviour {
+public class SpellStats : MonoBehaviour {
 
     //  The amount of damage
     [Tooltip("Damage Dealt")]

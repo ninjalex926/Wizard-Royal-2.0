@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7534353723493556482}
   - component: {fileID: 8497069249415911780}
   - component: {fileID: 7123275975867307135}
-  - component: {fileID: 405500528530030184}
+  - component: {fileID: 8365804238531935866}
   - component: {fileID: 3334341275400518141}
   - component: {fileID: 7356365078468688714}
   m_Layer: 0
@@ -129,12 +129,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileForce: 903.19
-  damage: 10
   forceHit: 0
   forceMode: 0
   explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 3}
   hasHitEffect: 1
---- !u!114 &405500528530030184
+--- !u!114 &8365804238531935866
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,10 +142,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7748558167780629739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2bf64a897e78964ca1c2699b2947535, type: 3}
+  m_Script: {fileID: 11500000, guid: fb43c6efd90492b4aa76bc89614cd960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 3
+  damage: 10
+  damagetype: Fire
+  isDamageOverTime: 0
+  hasTimer: 1
+  timer: 2
+  increaseTimer: 0
+  part: {fileID: 3334341275400518141}
+  hurtPlayer: 0
+  hurtTarget: 1
+  dealDamageByTrigger: 1
 --- !u!198 &3334341275400518141
 ParticleSystem:
   m_ObjectHideFlags: 0
