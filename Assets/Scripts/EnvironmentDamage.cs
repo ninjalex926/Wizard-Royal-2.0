@@ -12,8 +12,7 @@
 /******************************************************************/
 using UnityEngine;
 
-// PlayerScript requires the GameObject to have a Rigidbody component
-[RequireComponent(typeof(Collider))]
+
 
 public class SpellStats : MonoBehaviour {
 

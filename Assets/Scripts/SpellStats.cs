@@ -3,17 +3,17 @@
 //  Creation Date:     December 13th, 2020
 //
 //  Brief Description: 
-//  Handles envoirmental damage
+//  Holds Spells Values and Deals damage on Collision
 //  
 //  It does the following:
 //  Deals damage to the player on contact 
 //  Can deal damage over tine
 //  Destroys itself over a timer 
+// Can collider with Triggers or Partcle Worl Effects
 /******************************************************************/
 using UnityEngine;
 
-// PlayerScript requires the GameObject to have a Rigidbody component
-[RequireComponent(typeof(Collider))]
+
 
 public class EnvironmentDamage : MonoBehaviour {
 

@@ -143,9 +143,19 @@
     <Compile Include="Assets\Scripts\VFX Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\SpellStats.cs" />
     <Compile Include="Assets\Scripts\B Raycasting Scripts\Target.cs" />
+    <Compile Include="Assets\VFX\Hovl Studio\AAA Projectiles Vol 1\Scripts\AutoDestroyPS.cs" />
+    <Compile Include="Assets\VFX\Hovl Studio\AAA Projectiles Vol 1\Scripts\ParticleCollisionInstance.cs" />
+    <Compile Include="Assets\VFX\Hovl Studio\AAA Projectiles Vol 1\Demo scenes\DemoShooting.cs" />
+    <Compile Include="Assets\VFX\Hovl Studio\AAA Projectiles Vol 1\Scripts\ProjectileMover.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\VFX\Hovl Studio\AAA Projectiles Vol 1\Demo scenes\Readme.txt" />
+     <None Include="Assets\VFX\Hovl Studio\AAA Projectiles Vol 1\Prefabs\Readme.txt" />
+     <None Include="Assets\VFX\Hovl Studio\AAA Projectiles Vol 1\Shaders\Electricity.shader" />
+     <None Include="Assets\VFX\Hovl Studio\AAA Projectiles Vol 1\Shaders\Blend_CenterGlow.shader" />
      <None Include="Assets\VFX\PinwheelFantasyEffect\README.txt" />
+     <None Include="Assets\VFX\Hovl Studio\AAA Projectiles Vol 1\Shaders\AddTrail.shader" />
+     <None Include="Assets\VFX\Hovl Studio\AAA Projectiles Vol 1\Shaders\Add_CenterGlow.shader" />
      <None Include="Assets\Font\OFL.txt" />
     <Reference Include="UnityEngine">
       <HintPath>F:\2020.1.2f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
