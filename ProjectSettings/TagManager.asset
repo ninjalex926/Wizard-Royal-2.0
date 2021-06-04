@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FireSpell
   - Enemy
+  - WaterSpell
   layers:
   - Default
   - TransparentFX

@@ -9,8 +9,13 @@ public class Target : MonoBehaviour
 
     public Health_Bar targetHealthBar;
 
-    [HideInInspector] public Rigidbody targetRB;
+    public bool hideHealthBar;
 
+    public bool isDead;
+
+    public GameObject healthBarObj;
+
+    [HideInInspector] public Rigidbody targetRB;
 
     public void Start()
     {
@@ -19,7 +24,14 @@ public class Target : MonoBehaviour
 
     public void Update()
     {
-   //    
+        if (hideHealthBar)
+        {
+            healthBarObj.SetActive(false);
+        }
+        else
+        {
+            healthBarObj.SetActive(true);
+        }
     }
 
 
@@ -37,6 +49,11 @@ public class Target : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
+        if (!isDead)
+        {
+            Destroy(gameObject);
+            isDead = true;
+        }
+
     }
 }

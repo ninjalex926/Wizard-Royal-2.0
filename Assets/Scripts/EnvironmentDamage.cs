@@ -76,8 +76,9 @@ public class EnvironmentDamage : MonoBehaviour {
                 }
             }
         }
+
         // Hurt the target
-        else if (hurtTarget)
+         if (hurtTarget)
         {
             if (other.gameObject.tag.Equals("Enemy"))
             {
@@ -91,14 +92,44 @@ public class EnvironmentDamage : MonoBehaviour {
                 }
             }
         }
-        // Doesn't Hurt anyone
-        else
+
+
+        // Hurt the target and player
+        if (hurtTarget && hurtPlayer)
         {
+            if (other.gameObject.tag.Equals("Enemy"))
+            {
+                target = other.gameObject.transform.GetComponent<Target>();
+     
 
+                targetIsTouching = true;
+
+                print("Damage target");
+               
+
+                if (!isDamageOverTime)
+                {
+            
+                    target.TakeDamage(damage);
+                }
+            }
+
+            if(other.gameObject.tag.Equals("Player"))
+            {
+
+                print("Damage player"); 
+
+                player = other.gameObject.transform.GetComponent<PlayerStats>();
+
+                playerIsTouching = true;
+
+                if (!isDamageOverTime)
+                {
+                    player.TakeDamage(damage);
+                
+                }
+            } 
         }
-
-
-
 
 
         if (other.gameObject.tag.Equals("FireSpell"))
