@@ -44,7 +44,9 @@ public class EnvironmentDamage : MonoBehaviour {
     private bool targetIsTouching = false;
 
     //  Checks to see if the target is touching the partcle effect
- //   private bool fireIsTouching = false;
+    //   private bool fireIsTouching = false;
+
+    public ParticleSystem part;
 
     public bool hurtPlayer;
 
@@ -55,12 +57,103 @@ public class EnvironmentDamage : MonoBehaviour {
     private PlayerStats player;
 
 
-    /// <summary>
-    /// Deal damage to the player if they are touching the particle effect
-    /// </summary>
-    /// <param name="other"></param>
-    private void OnTriggerEnter(Collider other)
+    public bool dealDamageByTrigger;
+
+
+    void OnTriggerStay(Collider other)
     {
+        if (dealDamageByTrigger)
+        {
+
+            // Hurt the player
+            if (hurtPlayer)
+            {
+                if (other.gameObject.tag.Equals("Player"))
+                {
+                    player = other.gameObject.transform.GetComponent<PlayerStats>();
+
+                    playerIsTouching = true;
+
+                    if (!isDamageOverTime)
+                    {
+                        player.TakeDamage(damage);
+                    }
+                }
+            }
+
+            // Hurt the target
+            if (hurtTarget)
+            {
+                if (other.gameObject.tag.Equals("Enemy"))
+                {
+                    target = other.gameObject.transform.GetComponent<Target>();
+
+                    targetIsTouching = true;
+
+                    if (!isDamageOverTime)
+                    {
+                        target.TakeDamage(damage);
+                    }
+                }
+            }
+
+
+            // Hurt the target and player
+            if (hurtTarget && hurtPlayer)
+            {
+                if (other.gameObject.tag.Equals("Enemy"))
+                {
+                    target = other.gameObject.transform.GetComponent<Target>();
+
+
+                    targetIsTouching = true;
+
+                    print("Damage target");
+
+
+                    if (!isDamageOverTime)
+                    {
+
+                        target.TakeDamage(damage);
+                    }
+                }
+
+                if (other.gameObject.tag.Equals("Player"))
+                {
+
+                    print("Damage player");
+
+                    player = other.gameObject.transform.GetComponent<PlayerStats>();
+
+                    playerIsTouching = true;
+
+                    if (!isDamageOverTime)
+                    {
+                        player.TakeDamage(damage);
+
+                    }
+                }
+            }
+
+
+            if (other.gameObject.tag.Equals("FireSpell"))
+            {
+                print("contact with fire");
+
+                if (damagetype == "Fire")
+                {
+
+
+                    print("INCEREASE Flame time");
+                    timer += increaseTimer;
+                }
+            }
+        }
+    }
+
+    void OnParticleCollision(GameObject other)
+    {
+
         // Hurt the player
         if (hurtPlayer)
         {
@@ -78,7 +171,7 @@ public class EnvironmentDamage : MonoBehaviour {
         }
 
         // Hurt the target
-         if (hurtTarget)
+        if (hurtTarget)
         {
             if (other.gameObject.tag.Equals("Enemy"))
             {
@@ -100,24 +193,24 @@ public class EnvironmentDamage : MonoBehaviour {
             if (other.gameObject.tag.Equals("Enemy"))
             {
                 target = other.gameObject.transform.GetComponent<Target>();
-     
+
 
                 targetIsTouching = true;
 
                 print("Damage target");
-               
+
 
                 if (!isDamageOverTime)
                 {
-            
+
                     target.TakeDamage(damage);
                 }
             }
 
-            if(other.gameObject.tag.Equals("Player"))
+            if (other.gameObject.tag.Equals("Player"))
             {
 
-                print("Damage player"); 
+                print("Damage player");
 
                 player = other.gameObject.transform.GetComponent<PlayerStats>();
 
@@ -126,9 +219,9 @@ public class EnvironmentDamage : MonoBehaviour {
                 if (!isDamageOverTime)
                 {
                     player.TakeDamage(damage);
-                
+
                 }
-            } 
+            }
         }
 
 
@@ -139,12 +232,33 @@ public class EnvironmentDamage : MonoBehaviour {
             if (damagetype == "Fire")
             {
 
-    
+
                 print("INCEREASE Flame time");
                 timer += increaseTimer;
             }
         }
+
+
     }
+
+
+
+    /// <summary>
+    /// Deal damage to the player if they are touching the particle effect
+    /// </summary>
+    /// <param name="other"></param>
+    private void OnTriggerEnter(Collider other)
+    {
+      
+    }
+
+    private void Start()
+    {
+        part = GetComponent<ParticleSystem>();
+    }
+
+
+
 
     /// <summary>
     /// Deals damage to the player over time
@@ -155,7 +269,9 @@ public class EnvironmentDamage : MonoBehaviour {
         {
             target.TakeDamage(damage);
         }
-        else if(playerIsTouching && isDamageOverTime)
+
+      
+        if (playerIsTouching && isDamageOverTime)
         {
             player.TakeDamage(damage);
         }
