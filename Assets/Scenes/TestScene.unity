@@ -542,6 +542,10 @@ PrefabInstance:
       propertyPath: dealDamageByTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6541042770011060642, guid: 8895878d656afe34792191c14bc1dff7, type: 3}
+      propertyPath: elementType
+      value: Fire
+      objectReference: {fileID: 0}
     - target: {fileID: 6541042770011060652, guid: 8895878d656afe34792191c14bc1dff7, type: 3}
       propertyPath: m_Radius
       value: 9.11

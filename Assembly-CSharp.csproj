@@ -101,7 +101,6 @@
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Monitors\VectorscopeMonitor.cs" />
     <Compile Include="Assets\Scripts\Mana_Bar.cs" />
     <Compile Include="Assets\Scripts\Raycast Shooting Scripts\ShootableBox.cs" />
-    <Compile Include="Assets\Scripts\EnvironmentDamage.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Monitors\Monitor.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\PostProcessEffectRenderer.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Effects\ScalableAO.cs" />
