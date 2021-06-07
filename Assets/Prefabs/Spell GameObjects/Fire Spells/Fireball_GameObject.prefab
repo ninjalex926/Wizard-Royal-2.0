@@ -123,7 +123,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7748558167780629739}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2a16897d6e66654d93f18724a816240, type: 3}
   m_Name: 
@@ -140,17 +140,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7748558167780629739}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb43c6efd90492b4aa76bc89614cd960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  damagetype: Fire
+  elementType: 
   isDamageOverTime: 0
   hasTimer: 1
   timer: 2
   increaseTimer: 0
+  projectileForce: 250
+  forceHit: 0
+  hasForce: 0
+  forceMode: 0
   part: {fileID: 3334341275400518141}
   hurtPlayer: 0
   hurtTarget: 1
@@ -291,7 +295,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2

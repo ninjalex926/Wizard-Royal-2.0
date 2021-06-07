@@ -62,19 +62,6 @@ public class SpellStats : MonoBehaviour {
     //  The Force Mode
     public ForceMode forceMode;
 
-    //  The Initail Hit Effect 
-    private GameObject hitEffect;
-
-    //  The Initail Hit Effect 
-    public GameObject[] hitEffectArray;
-
-    //  What Hit Effect to use from the Array
-    // 0 = WateHit  = Smoke, 2 = Fire Hit
-    public int hitEffectNum;
-
-    //  Does this Game Object have a Hit Effect
-    public bool hasHitEffect;
-
     //  Referance to this Game Object Partcle System
     [Tooltip("Referance to this Game Object Partcle System")]
     public ParticleSystem part;
@@ -220,7 +207,6 @@ public class SpellStats : MonoBehaviour {
                     if (!isDamageOverTime)
                     {
                         player.TakeDamage(damage);
-
                     }
                 }
             }
@@ -248,11 +234,8 @@ public class SpellStats : MonoBehaviour {
     void OnParticleCollision(GameObject other)
     {
         //-----------------------------------------------------------------------------
-        //  Does it Have Force, or Multi-Hit Effects
+        //  Does it Have Force - Deal Damage
         //-----------------------------------------------------------------------------
-
-
-
 
         // Add Force
         if (hasForce)
@@ -307,7 +290,6 @@ public class SpellStats : MonoBehaviour {
             {
                 target = other.gameObject.transform.GetComponent<Target>();
 
-
                 targetIsTouching = true;
 
                 print("Damage target");
@@ -322,8 +304,7 @@ public class SpellStats : MonoBehaviour {
             //  Damage the Player
             if (other.gameObject.tag.Equals("Player"))
             {
-
-                print("Damage player");
+                print("Damage player by particle collsion");
 
                 player = other.gameObject.transform.GetComponent<PlayerStats>();
 
@@ -332,63 +313,57 @@ public class SpellStats : MonoBehaviour {
                 if (!isDamageOverTime)
                 {
                     player.TakeDamage(damage);
-
                 }
-            }
+            }           
         }
-
-        //-----------------------------------------------------------------------
-        //  Check Spell Collision with other Spells
-        //-----------------------------------------------------------------------
-
-        //  Fire Collides with Fire
-        //  Effects:
-        //  Increase Fire Time
+        //---------------------------------------------
+        // // Contact with other Spells
         if (other.gameObject.tag.Equals("FireSpell"))
         {
-            print("fire made contact with fire");
-
-            hitEffectNum = 2;
+            print("contact with fore");
 
             if (elementType == "Fire")
             {
                 print("INCEREASE Flame time");
+                print("fire made contact with fire");
                 timer += increaseTimer;
             }
-        }
-
-        //  Fire Collides with Water/ Water -> Fire
-        //  Effects:
-        //  Increase Fire Time
-        if (other.gameObject.tag.Equals("WaterSpell"))
-        {
-
-            hitEffectNum = 1;
-
-            print("water made contact with fire");
-
-            if (elementType == "Fire")
-            {
-                print("DECREASE Flame time");
-                timer -= increaseTimer;
-            }
-        }
-
-
-        //  Water Collides with Fire/ Water -> Fire
-        //  Effects:
-        //  Increase Fire Time
-        if (other.gameObject.tag.Equals("FireSpell"))
-        {
-            print("fire made contact with water");
-
-            hitEffectNum = 1;
 
             if (elementType == "Water")
             {
-                print("DECREASE Flame time");
+                print("DeCEREASE Flame time");
+                print("Water made contact with fire");
+                timer -= increaseTimer;
+            }
+        }
+    }
 
-                other.gameObject.GetComponent<SpellStats>().timer -= increaseTimer;
+    void OnParticleTrigger()
+    {
+               
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        //---------------------------------------------
+        // // Contact with other Spells
+        if (other.gameObject.tag.Equals("FireSpell"))
+        {
+            print("contact with fore");
+
+            if (elementType == "Fire")
+            {
+                print("INCEREASE Flame time");
+                print("fire made contact with fire");
+                other.gameObject.GetComponent<SpellStats>().timer += other.gameObject.GetComponent<SpellStats>().increaseTimer;
+            }
+
+            if (elementType == "Water")
+            {
+                print("DeCEREASE Flame time");
+                print("Water made contact with fire");
+                other.gameObject.GetComponent<SpellStats>().timer -= other.gameObject.GetComponent<SpellStats>().increaseTimer;
+                print(other.gameObject.GetComponent<SpellStats>().timer);
             }
         }
     }

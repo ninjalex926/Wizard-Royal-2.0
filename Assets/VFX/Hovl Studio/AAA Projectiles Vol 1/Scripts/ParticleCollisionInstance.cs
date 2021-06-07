@@ -17,10 +17,16 @@ public class ParticleCollisionInstance : MonoBehaviour
     private List<ParticleCollisionEvent> collisionEvents = new List<ParticleCollisionEvent>();
     private ParticleSystem ps;
 
+  [SerializeField]  private SpellStats spellStats;
+
+    private int hitEffectNum;
+
     void Start()
     {
         part = GetComponent<ParticleSystem>();
     }
+
+
     void OnParticleCollision(GameObject other)
     {      
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);     
@@ -43,6 +49,36 @@ public class ParticleCollisionInstance : MonoBehaviour
         if (DestoyMainEffect == true)
         {
             Destroy(gameObject, DestroyTimeDelay + 0.5f);
+        }
+
+        //-----------------------------------------------------------------------
+        //  Hit Effect Based on Spell and Collison
+        //-----------------------------------------------------------------------
+
+        //  Fire Collides with Fire
+        //  Effects:
+        //  Increase Fire Time
+        if (other.gameObject.tag.Equals("FireSpell"))
+        {
+
+            hitEffectNum = 2;
+         
+        }
+
+        //  Fire Collides with  Water -> Fire
+        //  Effects:
+        //  Decrease Fire Time
+        if (other.gameObject.tag.Equals("WaterSpell"))
+        {
+            hitEffectNum = 1;
+
+            print("water made contact with fire");
+
+            if (spellStats.elementType == "Fire")
+            {
+                print("DECREASE Flame time");
+                spellStats.timer -= spellStats.increaseTimer;
+            }
         }
     }
 }

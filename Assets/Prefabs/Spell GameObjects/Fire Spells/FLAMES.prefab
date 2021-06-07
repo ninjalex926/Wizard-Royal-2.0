@@ -3552,9 +3552,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -4797,13 +4797,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  damagetype: Fire
+  elementType: 
   isDamageOverTime: 1
   hasTimer: 1
   timer: 10
   increaseTimer: 5
+  projectileForce: 250
+  forceHit: 0
+  hasForce: 0
+  forceMode: 0
+  part: {fileID: 0}
   hurtPlayer: 1
   hurtTarget: 1
+  dealDamageByTrigger: 0
 --- !u!1 &6541042770011128403
 GameObject:
   m_ObjectHideFlags: 0
