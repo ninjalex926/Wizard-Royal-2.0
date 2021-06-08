@@ -82,8 +82,13 @@ public class SpellStats : MonoBehaviour {
 
     //  Check Damage Collison by Collider Trigger or by Particle World Collsion
     // If False use Particle Woeld Collision
-    [Tooltip("Check Damage Collison by Collider Trigger or by Particle World Collsion")]
-    public bool dealDamageByTrigger;
+    [Tooltip("Check Damage by On Trigger Enter")]
+    public bool dealDamageByOnTriggerEnter;
+
+    //  Check Damage Collison by Collider Trigger or by Particle World Collsion
+    // If False use Particle Woeld Collision
+    [Tooltip("Check Damage by Particle World Collsion")]
+    public bool dealDamageByOnParticleCollsion;
 
 
     /// <summary>
@@ -137,9 +142,8 @@ public class SpellStats : MonoBehaviour {
     /// <param name="other"></param>
     void OnTriggerStay(Collider other)
     {
-        if (dealDamageByTrigger)
+        if (dealDamageByOnTriggerEnter)
         {
-
             // Hurt the player
             if (hurtPlayer)
             {
@@ -237,103 +241,106 @@ public class SpellStats : MonoBehaviour {
         //  Does it Have Force - Deal Damage
         //-----------------------------------------------------------------------------
 
-        // Add Force
-        if (hasForce)
+        if(dealDamageByOnParticleCollsion)
         {
-            if (other.tag == "Enemy")
+            // Add Force
+            if (hasForce)
             {
-                Target target = other.gameObject.transform.GetComponent<Target>();
-
-                Rigidbody targetRb = other.gameObject.GetComponent<Rigidbody>();
-
-                targetRb.AddForce(0f, 0f, forceHit);
-            }
-        }
-
-        // Hurt the player
-        if (hurtPlayer)
-        {
-            if (other.gameObject.tag.Equals("Player"))
-            {
-                player = other.gameObject.transform.GetComponent<PlayerStats>();
-
-                playerIsTouching = true;
-
-                if (!isDamageOverTime)
+                if (other.tag == "Enemy")
                 {
-                    player.TakeDamage(damage);
+                    Target target = other.gameObject.transform.GetComponent<Target>();
+
+                    Rigidbody targetRb = other.gameObject.GetComponent<Rigidbody>();
+
+                    targetRb.AddForce(0f, 0f, forceHit);
                 }
             }
-        }
 
-        // Hurt the target
-        if (hurtTarget)
-        {
-            if (other.gameObject.tag.Equals("Enemy"))
+            // Hurt the player
+            if (hurtPlayer)
             {
-                target = other.gameObject.transform.GetComponent<Target>();
-
-                targetIsTouching = true;
-
-                if (!isDamageOverTime)
+                if (other.gameObject.tag.Equals("Player"))
                 {
-                    target.TakeDamage(damage);
+                    player = other.gameObject.transform.GetComponent<PlayerStats>();
+
+                    playerIsTouching = true;
+
+                    if (!isDamageOverTime)
+                    {
+                        player.TakeDamage(damage);
+                    }
                 }
             }
-        }
 
-        // Hurt the target and player
-        if (hurtTarget && hurtPlayer)
-        {
-            //Damage Enemy
-            if (other.gameObject.tag.Equals("Enemy"))
+            // Hurt the target
+            if (hurtTarget)
             {
-                target = other.gameObject.transform.GetComponent<Target>();
-
-                targetIsTouching = true;
-
-                print("Damage target");
-
-
-                if (!isDamageOverTime)
+                if (other.gameObject.tag.Equals("Enemy"))
                 {
+                    target = other.gameObject.transform.GetComponent<Target>();
 
-                    target.TakeDamage(damage);
+                    targetIsTouching = true;
+
+                    if (!isDamageOverTime)
+                    {
+                        target.TakeDamage(damage);
+                    }
                 }
             }
-            //  Damage the Player
-            if (other.gameObject.tag.Equals("Player"))
+
+            // Hurt the target and player
+            if (hurtTarget && hurtPlayer)
             {
-                print("Damage player by particle collsion");
-
-                player = other.gameObject.transform.GetComponent<PlayerStats>();
-
-                playerIsTouching = true;
-
-                if (!isDamageOverTime)
+                //Damage Enemy
+                if (other.gameObject.tag.Equals("Enemy"))
                 {
-                    player.TakeDamage(damage);
+                    target = other.gameObject.transform.GetComponent<Target>();
+
+                    targetIsTouching = true;
+
+                    print("Damage target");
+
+
+                    if (!isDamageOverTime)
+                    {
+
+                        target.TakeDamage(damage);
+                    }
                 }
-            }           
-        }
-        //---------------------------------------------
-        // // Contact with other Spells
-        if (other.gameObject.tag.Equals("FireSpell"))
-        {
-            print("contact with fore");
+                //  Damage the Player
+                if (other.gameObject.tag.Equals("Player"))
+                {
+                    print("Damage player by particle collsion");
 
-            if (elementType == "Fire")
-            {
-                print("INCEREASE Flame time");
-                print("fire made contact with fire");
-                timer += increaseTimer;
+                    player = other.gameObject.transform.GetComponent<PlayerStats>();
+
+                    playerIsTouching = true;
+
+                    if (!isDamageOverTime)
+                    {
+                        player.TakeDamage(damage);
+                    }
+                }
             }
-
-            if (elementType == "Water")
+            //---------------------------------------------
+            // // Contact with other Spells
+            if (other.gameObject.tag.Equals("FireSpell"))
             {
-                print("DeCEREASE Flame time");
-                print("Water made contact with fire");
-                timer -= increaseTimer;
+                print("contact with fore");
+
+                if (elementType == "Fire")
+                {
+                    print("INCEREASE Flame time");
+                    print("fire made contact with fire");
+                    timer += increaseTimer;
+                }
+
+                if (elementType == "Water")
+                {
+                    print("DeCEREASE Flame time");
+                    print("Water made contact with fire");
+                    timer -= increaseTimer;
+                }
             }
         }
     }
@@ -343,27 +350,129 @@ public class SpellStats : MonoBehaviour {
                
     }
 
+
+    //------------------------------------------------------
+    // // Contact with other Spells By On Trigger Enter    
+    //-----------------------------------------------------------
     public void OnTriggerEnter(Collider other)
     {
+
         //---------------------------------------------
-        // // Contact with other Spells
-        if (other.gameObject.tag.Equals("FireSpell"))
+        // // Burnable Objects?
+        //-------------------------------------------
+        if (other.gameObject.tag.Equals("Tree"))
         {
-            print("contact with fore");
+         //   print("TREEEEEEEEEEEEEEEEEEEEE");
 
             if (elementType == "Fire")
             {
-                print("INCEREASE Flame time");
-                print("fire made contact with fire");
-                other.gameObject.GetComponent<SpellStats>().timer += other.gameObject.GetComponent<SpellStats>().increaseTimer;
+             //   print("Im BURRRRRNNNINGGGGGGGGGGTREEEE!!!!!!!!");
+                other.gameObject.GetComponent<FireScript>().StartFire();
+            }
+        }
+
+        if (dealDamageByOnTriggerEnter)
+        {
+            // Add Force
+            if (hasForce)
+            {
+                if (other.tag == "Enemy")
+                {
+                    Target target = other.gameObject.transform.GetComponent<Target>();
+
+                    Rigidbody targetRb = other.gameObject.GetComponent<Rigidbody>();
+
+                    targetRb.AddForce(0f, 0f, forceHit);
+                }
             }
 
-            if (elementType == "Water")
+            // Hurt the player
+            if (hurtPlayer)
             {
-                print("DeCEREASE Flame time");
-                print("Water made contact with fire");
-                other.gameObject.GetComponent<SpellStats>().timer -= other.gameObject.GetComponent<SpellStats>().increaseTimer;
-                print(other.gameObject.GetComponent<SpellStats>().timer);
+                if (other.gameObject.tag.Equals("Player"))
+                {
+                    player = other.gameObject.transform.GetComponent<PlayerStats>();
+
+                    playerIsTouching = true;
+
+                    if (!isDamageOverTime)
+                    {
+                        player.TakeDamage(damage);
+                    }
+                }
+            }
+
+            // Hurt the target
+            if (hurtTarget)
+            {
+                if (other.gameObject.tag.Equals("Enemy"))
+                {
+                    target = other.gameObject.transform.GetComponent<Target>();
+
+                    targetIsTouching = true;
+
+                    if (!isDamageOverTime)
+                    {
+                        target.TakeDamage(damage);
+                    }
+                }
+            }
+
+            // Hurt the target and player
+            if (hurtTarget && hurtPlayer)
+            {
+                //Damage Enemy
+                if (other.gameObject.tag.Equals("Enemy"))
+                {
+                    target = other.gameObject.transform.GetComponent<Target>();
+
+                    targetIsTouching = true;
+
+                    print("Damage target");
+
+
+                    if (!isDamageOverTime)
+                    {
+
+                        target.TakeDamage(damage);
+                    }
+                }
+                //  Damage the Player
+                if (other.gameObject.tag.Equals("Player"))
+                {
+                    print("Damage player by particle collsion");
+
+                    player = other.gameObject.transform.GetComponent<PlayerStats>();
+
+                    playerIsTouching = true;
+
+                    if (!isDamageOverTime)
+                    {
+                        player.TakeDamage(damage);
+                    }
+                }
+            }
+
+
+            //---------------------------------------------
+            // // Contact with other Spells
+            if (other.gameObject.tag.Equals("FireSpell"))
+            {
+                print("contact with fore");
+
+                if (elementType == "Fire")
+                {
+                    print("INCEREASE Flame time");
+                    print("fire made contact with fire");
+                    timer += increaseTimer;
+                }
+
+                if (elementType == "Water")
+                {
+                    print("DeCEREASE Flame time");
+                    print("Water made contact with fire");
+                    timer -= increaseTimer;
+                }
             }
         }
     }

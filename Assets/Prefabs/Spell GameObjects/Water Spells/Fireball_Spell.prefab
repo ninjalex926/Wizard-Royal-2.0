@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 5412078763787221641}
   m_Layer: 0
   m_Name: Fireball_Spell
-  m_TagString: WaterSpell
+  m_TagString: FireSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4903,7 +4903,8 @@ MonoBehaviour:
   part: {fileID: 5426023568771115995}
   hurtPlayer: 0
   hurtTarget: 1
-  dealDamageByTrigger: 1
+  dealDamageByOnTriggerEnter: 0
+  dealDamageByOnParticleCollsion: 0
 --- !u!114 &5412078763787221641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4927,3 +4928,5 @@ MonoBehaviour:
   DestoyMainEffect: 1
   spellStats: {fileID: 6044884793942172875}
   selfGameObject: {fileID: 1044983063216410317}
+  effectVfx1: {fileID: 0}
+  effectVfx2: {fileID: 0}

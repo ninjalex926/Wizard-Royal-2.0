@@ -9,6 +9,8 @@ public class FireScript : MonoBehaviour
     public ParticleSystem fire;
     public ParticleSystem dissolve;
 
+    [SerializeField] private GameObject fireObj;
+
     public bool SmokeOnStart = false;
     public bool Dissolvable = true;
 
@@ -56,6 +58,7 @@ public class FireScript : MonoBehaviour
     public void StartFire()
     {
         fireStart = Time.time;
+        fireObj.SetActive(true);
         this.StartCoroutine(Fire(fireStart));
     }
 
