@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5426023568771115995}
   - component: {fileID: 225145924482148716}
   - component: {fileID: 6044884793942172875}
-  - component: {fileID: 5412078763787221641}
+  - component: {fileID: 3408734184147466895}
   m_Layer: 0
   m_Name: Waterball_Spell
   m_TagString: WaterSpell
@@ -4904,7 +4904,7 @@ MonoBehaviour:
   hurtPlayer: 0
   hurtTarget: 1
   dealDamageByTrigger: 0
---- !u!114 &5412078763787221641
+--- !u!114 &3408734184147466895
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4913,16 +4913,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1044983063216410317}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a959a1b0b8414d4fb8a68bdc12d69ed, type: 3}
+  m_Script: {fileID: 11500000, guid: c2a16897d6e66654d93f18724a816240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EffectsOnCollision:
-  - {fileID: 1089465354904564, guid: f0787644f783ce246a1c12b8f1ad56d1, type: 3}
-  DestroyTimeDelay: 5
-  UseWorldSpacePosition: 0
-  Offset: 0
-  rotationOffset: {x: 0, y: 0, z: 0}
-  useOnlyRotationOffset: 1
-  UseFirePointRotation: 0
-  DestoyMainEffect: 1
+  part: {fileID: 5426023568771115995}
   spellStats: {fileID: 6044884793942172875}
+  selfGameObject: {fileID: 1044983063216410317}
+  fireHitEffect: {fileID: 1220213892471706, guid: 45a9238cb6800d046b6a957bc30d93c1,
+    type: 3}
+  waterHitEffect: {fileID: 1089465354904564, guid: f0787644f783ce246a1c12b8f1ad56d1,
+    type: 3}
+  smokeHitEffect: {fileID: 147566, guid: aa4f815c09f4d5a4281113aba6c844f7, type: 3}
+  hasHitEffect: 1
+  triggerByOnEnter: 1
+  triggerByOnParticleCollison: 1
+  triggerByOnParticleTrigger: 0
