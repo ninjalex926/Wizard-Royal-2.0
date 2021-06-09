@@ -12,10 +12,16 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private GameManager gameManager;
 
     public int maxHealth;
-        public int currentPlayerHealth;
+    public int currentPlayerHealth;
 
     public int maxMana;
     public int currentPlayerMana;
+
+    public int maxFireMana;
+    public int currentFirePlayerMana;
+
+    public int maxWaterMana;
+    public int currentWaterPlayerMana;
 
 
 

@@ -25,6 +25,8 @@ public class FireScript : MonoBehaviour
     private float smokeStart;
     private float fireStart;
 
+    public bool isBurning;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,10 @@ public class FireScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isBurning)
+        {
+            fireObj.SetActive(true);
+        }
 
         if (transform.position != oldPosition)
         {
@@ -52,13 +58,14 @@ public class FireScript : MonoBehaviour
         if (this.Burning) return;
 
         smokeStart = Time.time;
+    
         this.StartCoroutine(Smoke(smokeStart));
     }
 
     public void StartFire()
     {
         fireStart = Time.time;
-        fireObj.SetActive(true);
+        isBurning = true;
         this.StartCoroutine(Fire(fireStart));
     }
 
