@@ -9,6 +9,8 @@ public class PlayerStats : MonoBehaviour
 
     public Mana_Bar manabar;
 
+    public Fire_Manabar fireManabar;
+
     [SerializeField] private GameManager gameManager;
 
     public int maxHealth;
@@ -36,8 +38,13 @@ public class PlayerStats : MonoBehaviour
     {
         healthbar.SetHealth(currentPlayerHealth);
         manabar.SetMana(currentPlayerMana);
+        fireManabar.SetFireMana(currentFirePlayerMana);
     }
 
+    /// <summary>
+    /// Casting a Spell Cost Mana
+    /// </summary>
+    /// <param name="manaCost"></param>
     public void ManaCost(int manaCost)
     {
         currentPlayerMana -= manaCost;
@@ -46,6 +53,22 @@ public class PlayerStats : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Casting a Spell Cost Mana
+    /// </summary>
+    /// <param name="manaCost"></param>
+    public void FireManaCost(int fireManaCost)
+    {
+        currentFirePlayerMana -= fireManaCost;
+
+        fireManabar.SetFireMana(currentFirePlayerMana);
+
+    }
+
+    /// <summary>
+    /// Player taking Damage
+    /// </summary>
+    /// <param name="damageAmount"></param>
     public void TakeDamage(int damageAmount)
     {
         currentPlayerHealth -= damageAmount;
@@ -58,6 +81,9 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Player dying
+    /// </summary>
     void Die()
     {
         Destroy(gameObject);

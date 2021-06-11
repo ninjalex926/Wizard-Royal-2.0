@@ -96,7 +96,7 @@
     <Compile Include="Assets\Utility\WaypointProgressTracker.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Utils\TextureLerper.cs" />
     <Compile Include="Assets\Vehicles\Car\Scripts\CarUserControl.cs" />
-    <Compile Include="Assets\Scripts\Raycast Shooting Scripts\RayCastShootComplete.cs" />
+    <Compile Include="Assets\Scripts\Raycast Shooting Scripts\SpellCastingBehaviour.cs" />
     <Compile Include="Assets\Shared\Scripts\AdjustTimeScale.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\PostProcessEffectSettings.cs" />
     <Compile Include="Assets\Utility\ParticleSystemDestroyer.cs" />
@@ -251,6 +251,10 @@
     <Compile Include="Assets\Scripts\SpellStats.cs" />
     <Compile Include="Assets\Scripts\B Raycasting Scripts\Target.cs" />
     <Compile Include="Assets\Utility\AutoMobileShaderSwitch.cs" />
+    <Compile Include="Assets\ElementalMeters\Scripts\MeterButtons.cs" />
+    <Compile Include="Assets\ElementalMeters\Scripts\MeterScript.cs" />
+    <Compile Include="Assets\ElementalMeters\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Fire_Manabar.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
@@ -273,6 +277,7 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Crystals\TranslucentCrystals\Resources\Shaders\Crystal.shader" />
+     <None Include="Assets\QS\Documentation\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\VFX\PinwheelFantasyEffect\README.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
