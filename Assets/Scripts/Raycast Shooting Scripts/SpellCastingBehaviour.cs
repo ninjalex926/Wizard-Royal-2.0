@@ -11,7 +11,7 @@ public class SpellCastingBehaviour : MonoBehaviour {
     public int fireManaCost;
     public float hitForce = 100f;                                       // Amount of force which will be added to objects with a rigidbody shot by the player
     private int mana;
-    private int fireMana;
+    public int fireMana;
 	public Transform gunEnd;											// Holds a reference to the gun end object, marking the muzzle location of the gun
 
     public GameObject spellObject;
@@ -69,6 +69,9 @@ public class SpellCastingBehaviour : MonoBehaviour {
 
     void Update () 
 	{
+
+        fireMana = playerCharacter.GetComponent<PlayerStats>().currentFirePlayerMana;
+
         // Check if the player has pressed the fire button and if enough time has elapsed since they last fired
         if (Input.GetButtonDown("Fire1") && !cooldownActive)
         {

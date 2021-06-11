@@ -27147,9 +27147,10 @@ MonoBehaviour:
   gunDamage: 1
   fireRate: 0
   weaponRange: 50
-  manaCost: 0
+  manaCost: 5
   fireManaCost: 10
   hitForce: 100
+  fireMana: 0
   gunEnd: {fileID: 1064709877799175724}
   spellObject: {fileID: 1044983063216410317, guid: 2a8c63b43ae8abc4ebe41119cd7b36b0,
     type: 3}
