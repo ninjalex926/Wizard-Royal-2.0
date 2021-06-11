@@ -255,6 +255,7 @@
     <Compile Include="Assets\ElementalMeters\Scripts\MeterScript.cs" />
     <Compile Include="Assets\ElementalMeters\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Fire_Manabar.cs" />
+    <Compile Include="Assets\PickupableObjects.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
@@ -265,7 +266,6 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\VFX\Hovl Studio\AAA Projectiles Vol 1\Prefabs\Readme.txt" />
      <None Include="Assets\Crystals\TranslucentCrystals\_SRP\!!!_ReadBeforeImport_!!!.txt" />
-     <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
      <None Include="Assets\VFX\EffectExamplesVFX\Misc Effects\Prefabs\Readme_Dissolve_Respawn_.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\VFX\Hovl Studio\AAA Projectiles Vol 1\Shaders\Electricity.shader" />
