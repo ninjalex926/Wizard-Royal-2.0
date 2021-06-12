@@ -21,13 +21,13 @@ public class PickupableObjects : MonoBehaviour
 
     public bool destroyOnTrigger;
 
-  
 
+    public bool autoPickup;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerRef = GameObject.Find("PlayerCharacter(First Person)");
     }
 
     // Update is called once per frame
@@ -65,39 +65,44 @@ public class PickupableObjects : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        // If t collides with player
-        if (other.tag == "Player")
+
+        if (autoPickup)
         {
-            if(healPlayer)
+            // If t collides with player
+            if (other.tag == "Player")
             {
-                RestorePlayerHealth(healthRestore);
-
-                if (destroyOnTrigger)
+                if (healPlayer)
                 {
-                    DestroySelf();
+                    RestorePlayerHealth(healthRestore);
+
+                    if (destroyOnTrigger)
+                    {
+                        DestroySelf();
+                    }
                 }
-            }
 
-            if(restorePlayerMana)
-            {
-                RestorePlayerMana(manaRestored);
-
-                if (destroyOnTrigger)
+                if (restorePlayerMana)
                 {
-                    DestroySelf();
+                    RestorePlayerMana(manaRestored);
+
+                    if (destroyOnTrigger)
+                    {
+                        DestroySelf();
+                    }
                 }
-            }
 
-            if(restorePlayerFireMana)
-            {
-                RestorePlayerFireMana(fireManRestored);
-
-                if(destroyOnTrigger)
+                if (restorePlayerFireMana)
                 {
-                    DestroySelf();
+                    RestorePlayerFireMana(fireManRestored);
+
+                    if (destroyOnTrigger)
+                    {
+                        DestroySelf();
+                    }
+
                 }
-               
             }
         }
+    
     }
 }

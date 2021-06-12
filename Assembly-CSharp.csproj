@@ -94,10 +94,13 @@
     <Compile Include="Assets\Vehicles\Car\Scripts\WheelEffects.cs" />
     <Compile Include="Assets\Scripts\Camera Scripts\ProtectCameraFromWallClip.cs" />
     <Compile Include="Assets\Utility\WaypointProgressTracker.cs" />
+    <Compile Include="Assets\Scripts\Fire_Manabar.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Utils\TextureLerper.cs" />
+    <Compile Include="Assets\ElementalMeters\Scripts\MeterButtons.cs" />
     <Compile Include="Assets\Vehicles\Car\Scripts\CarUserControl.cs" />
     <Compile Include="Assets\Scripts\Raycast Shooting Scripts\SpellCastingBehaviour.cs" />
     <Compile Include="Assets\Shared\Scripts\AdjustTimeScale.cs" />
+    <Compile Include="Assets\ElementalMeters\Scripts\MeterScript.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\PostProcessEffectSettings.cs" />
     <Compile Include="Assets\Utility\ParticleSystemDestroyer.cs" />
     <Compile Include="Assets\Utility\SimpleMouseRotator.cs" />
@@ -114,6 +117,7 @@
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Effects\ChromaticAberration.cs" />
     <Compile Include="Assets\Scripts\Sample Example Scripts\CameraSwitch.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Utils\HaltonSeq.cs" />
+    <Compile Include="Assets\ElementalMeters\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\ProjectileShootTriggerable.cs" />
     <Compile Include="Assets\Utility\ActivateTrigger.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Monitors\HistogramMonitor.cs" />
@@ -177,6 +181,7 @@
     <Compile Include="Assets\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\Scripts\Camera Scripts\TargetFieldOfView.cs" />
     <Compile Include="Assets\Scripts\Environment Water Scripts\Water.cs" />
+    <Compile Include="Assets\PickupableObjects.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Runtime\Utils\MeshUtilities.cs" />
     <Compile Include="Assets\Scripts\Platformer2DUserControl.cs" />
     <Compile Include="Assets\Scripts\FPC Scripts\RigidbodyFirstPersonController.cs" />
@@ -251,11 +256,8 @@
     <Compile Include="Assets\Scripts\SpellStats.cs" />
     <Compile Include="Assets\Scripts\B Raycasting Scripts\Target.cs" />
     <Compile Include="Assets\Utility\AutoMobileShaderSwitch.cs" />
-    <Compile Include="Assets\ElementalMeters\Scripts\MeterButtons.cs" />
-    <Compile Include="Assets\ElementalMeters\Scripts\MeterScript.cs" />
-    <Compile Include="Assets\ElementalMeters\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Fire_Manabar.cs" />
-    <Compile Include="Assets\PickupableObjects.cs" />
+    <Compile Include="Assets\Scripts\Hotbar_Icon.cs" />
+    <Compile Include="Assets\SpellPage.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
@@ -282,6 +284,7 @@
      <None Include="Assets\VFX\PinwheelFantasyEffect\README.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\VFX\Hovl Studio\AAA Projectiles Vol 1\Shaders\AddTrail.shader" />
+     <None Include="Assets\Grimoire\ReadMe.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\VFX\EffectExamplesVFX\Misc Effects\Shaders\FireFly.shader" />
      <None Include="Assets\VFX\Hovl Studio\AAA Projectiles Vol 1\Shaders\Add_CenterGlow.shader" />
