@@ -53,20 +53,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+    <Compile Include="Assets\ABC\Scripts\ABC-Components\Editor\ABC_StateManager_EditorWindow.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Utils\CurveEditor.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Effects\DepthOfFieldEditor.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Effects\ChromaticAberrationEditor.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Effects\ScreenSpaceReflectionsEditor.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Decorators\Decorators.cs" />
+    <Compile Include="Assets\ABC\Scripts\ABC-Components\Editor\ABC_SaveManager_Editor.cs" />
+    <Compile Include="Assets\ABC\Scripts\ABC-Components\Editor\ABC_Controller_Editor.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Effects\AmbientOcclusionEditor.cs" />
     <Compile Include="Assets\Scripts\Editor\Water\Water4\SpecularLightingEditor.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Tools\VolumeFactory.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Attributes\PostProcessEditorAttribute.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\EffectListEditor.cs" />
+    <Compile Include="Assets\ABC\Scripts\ABC-Components\Editor\ABC_StateManager Editor.cs" />
     <Compile Include="Assets\Scripts\Editor\Water\Water4\PlanarReflectionEditor.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Tools\ResourceAssetFactory.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\PostProcessVolumeEditor.cs" />
+    <Compile Include="Assets\ABC\Scripts\ABC-Components\Editor\ABC_ControllerAbility_EditorWindow.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Decorators\TrackballDecorator.cs" />
+    <Compile Include="Assets\ABC\Scripts\ABC-Components\Editor\ABC_Controller_EditorWindow.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Tools\CubeLutAssetFactory.cs" />
     <Compile Include="Assets\Scripts\Editor\Water\Water4\GerstnerDisplaceEditor.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Decorators\AttributeDecorator.cs" />
@@ -79,6 +85,7 @@
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Tools\DefineSetter.cs" />
     <Compile Include="Assets\Scripts\VFX Scripts\Editor\CompileLogger.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Utils\EditorUtilities.cs" />
+    <Compile Include="Assets\ABC\Demos\DemoScripts\Editor\PlayerSwitcher_Editor.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Tools\ProfileFactory.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\PostProcessEffectEditor.cs" />
@@ -91,12 +98,16 @@
     <Compile Include="Assets\Scripts\Editor\Water\Water4\WaterEditorUtility.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Attributes\DecoratorAttribute.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Effects\DefaultPostProcessEffectEditor.cs" />
+    <Compile Include="Assets\ABC\Scripts\ABC-Components\Editor\ABC_WeaponPickUp_EditorWindow.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\PostProcessProfileEditor.cs" />
     <Compile Include="Assets\Scripts\VFX Scripts\Editor\PolarisV2AdsWindow.cs" />
     <Compile Include="Assets\Shared\Ramps\Editor\RampAssetEditor.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Effects\LensDistortionEditor.cs" />
     <Compile Include="Assets\Scripts\Editor\Water\Water4\WaterBaseEditor.cs" />
     <Compile Include="Assets\Art Assets\PostProcessingV2\Editor\Utils\Styling.cs" />
+    <Compile Include="Assets\ABC\Scripts\ABC-Components\Editor\ABC_ExportedAbilities_Editor.cs" />
+    <Compile Include="Assets\ABC\Scripts\ABC-Components\Editor\ABC_WeaponPickUp_Editor.cs" />
+    <Compile Include="Assets\ActionRPGKit\Editor\CustomEventEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
