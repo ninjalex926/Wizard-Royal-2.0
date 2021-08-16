@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/ActionRPGKit/ExampleScene/Title.unity
+- path: Assets/ActionRPGKit/ExampleScene/BeakVillage.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
