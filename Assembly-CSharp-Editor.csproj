@@ -677,9 +677,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{7F2718DD-8261-C9EE-C743-EDEE422922F6}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{E8C121B2-F9C8-5537-9607-23DCF5F3AECD}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
+      <Project>{0F55DA76-6CCF-946F-0FEF-54C4CF7E9B4B}</Project>
+      <Name>Assembly-CSharp-Editor-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="GameCreator.Update.csproj">
+      <Project>{0387117B-3C3E-0E43-814B-6F53F534C344}</Project>
+      <Name>GameCreator.Update</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

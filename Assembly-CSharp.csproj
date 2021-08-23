@@ -991,6 +991,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{7F2718DD-8261-C9EE-C743-EDEE422922F6}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="GameCreator.Update.csproj">
+      <Project>{0387117B-3C3E-0E43-814B-6F53F534C344}</Project>
+      <Name>GameCreator.Update</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
