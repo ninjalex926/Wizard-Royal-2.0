@@ -270,6 +270,7 @@
     <Compile Include="Assets\Scripts\Platformer2DUserControl.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\Mount\MountActivatorC.cs" />
     <Compile Include="Assets\Scripts\FPC Scripts\RigidbodyFirstPersonController.cs" />
+    <Compile Include="Assets\WinLoseCon.cs" />
     <Compile Include="Assets\Scripts\CrossPlatformInput Scripts\CrossPlatformInputManager.cs" />
     <Compile Include="Assets\Scripts\Camera Scripts\HandHeldCam.cs" />
     <Compile Include="Assets\Emerald AI\Scripts\Character Controller\EmeraldAIHideMouse.cs" />
@@ -393,7 +394,6 @@
     <Compile Include="Assets\Scripts\B Raycasting Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\(Script) Utility\AutoMobileShaderSwitch.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\TeleporterC.cs" />
-    <Compile Include="Assets\WinLoseCon.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Emerald AI\Credit\Credit.txt" />
