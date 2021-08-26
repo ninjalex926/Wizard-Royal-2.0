@@ -9,7 +9,7 @@ public class FireScript : MonoBehaviour
     public ParticleSystem fire;
     public ParticleSystem dissolve;
 
-    [SerializeField] private GameObject fireObj;
+   public GameObject fireObj;
 
     public bool SmokeOnStart = false;
     public bool Dissolvable = true;
