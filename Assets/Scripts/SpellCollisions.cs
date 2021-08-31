@@ -61,7 +61,13 @@ public class SpellCollisions : MonoBehaviour
         {
             if (elementType == "Fire")
             {
-                other.gameObject.GetComponent<ABC_StateManager>().AdjustHealth(-0.1f);
+                if (isTreeFire)
+                {
+                    if (tree.GetComponent<FireScript>().isBurning)
+                    {
+                        other.gameObject.GetComponent<ABC_StateManager>().AdjustHealth(-0.1f);
+                    }
+                }
             }
         }
     }

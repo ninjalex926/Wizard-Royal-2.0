@@ -29,9 +29,11 @@ public class GrowGrass : MonoBehaviour
     {
         terrainDetector = new TerrainDetector();
     }
+
     public void Start()
     {
         activeTerrian = GameObject.Find("Terrain");
+        terrainDetector = new TerrainDetector();
     }
 
 
