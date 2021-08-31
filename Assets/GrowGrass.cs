@@ -48,10 +48,7 @@ public class GrowGrass : MonoBehaviour
         else if (other.gameObject == activeTerrian)
         {
          //   spawnable = true;
-
-
             int terrainTextureIndex = terrainDetector.GetActiveTerrainTextureIdx(transform.position);
-
 
             if (tPosition != grassSpawnPoint.transform.position)
             {
@@ -59,6 +56,7 @@ public class GrowGrass : MonoBehaviour
                 {
                     case 0:
                         Instantiate(grass, grassSpawnPoint.transform.position, grassSpawnPoint.transform.rotation);
+
                         tPosition = grassSpawnPoint.transform.position;
                         AutoSetRotation = grassSpawnPoint.transform.rotation;
                         print("TOUCHING Grass");

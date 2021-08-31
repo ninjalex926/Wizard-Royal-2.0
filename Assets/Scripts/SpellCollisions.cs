@@ -74,7 +74,7 @@ public class SpellCollisions : MonoBehaviour
         //---------------------------------------------
         //  Colliding with a Tree or Grass
         //-------------------------------------------
-        if (other.gameObject.tag.Equals("Tree"))
+        if (other.gameObject.tag.Equals("Tree")  || other.gameObject.tag.Equals("Grass"))
         {
             if (other.gameObject.GetComponent<FireScript>().isBurning)
             {
