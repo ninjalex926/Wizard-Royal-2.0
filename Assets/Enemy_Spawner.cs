@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy_Spawner : MonoBehaviour
 {
+
+    public GameObject waveMannager;
+
     public GameObject enemy1;
 
     public GameObject enemy2;
@@ -12,28 +15,54 @@ public class Enemy_Spawner : MonoBehaviour
 
     private int enemyToSpawn;
 
+    public bool connectWave;
+
+    private int waveGoal;
+
     [Tooltip("The current time of the Timer")]
     // The any given current time of the timer
-    public float enemySpawnerCurrentTime = 0f;
+    public float spawnerCurrentTime = 0f;
 
     [Tooltip("The Start time of the timer")]
     // The default starting time of the timer
-    public float startingEnemySpawnerCurrentTime = 10f;
+    public float startingSpawnerTime = 10f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        enemySpawnerCurrentTime = startingEnemySpawnerCurrentTime;
+        if (connectWave)
+        {
+            waveMannager = GameObject.FindGameObjectWithTag("WaveManager");
+            waveGoal = waveMannager.GetComponent<EnemyWaveManager>().waveKCGoal;
+        }
+
+        spawnerCurrentTime = startingSpawnerTime;
     }
 
     // Update is called once per frame
     void Update()
-    {   
-        if (startingEnemySpawnerCurrentTime <= 0)
+    {
+        // Is connected to Wave Manager
+        if (connectWave)
         {
-           // Timer count down
-           enemySpawnerCurrentTime-= 1 * Time.deltaTime;
+            if (enemyCount < waveGoal)
+            {
+                if (spawnerCurrentTime <= 0)
+                {
+                    Instantiate(enemy1, transform.position, transform.rotation);
+                    ++enemyCount;
+                    spawnerCurrentTime = startingSpawnerTime;
+                }
+            }
+
+            if (spawnerCurrentTime > 0)
+            {
+                // Timer count down
+                spawnerCurrentTime -= 1 * Time.deltaTime;
+            }
         }
+
+        // Not Connctd to Wave Manager
     }
 }
