@@ -10,13 +10,20 @@ public class GrowGrass : MonoBehaviour
 
     public GameObject activeTerrian;
 
+    public GameObject grassSpawnPoint;
+
     public GameObject grass;
 
-    public bool triggerByParticle;
+ //   public bool triggerByParticle;
 
-    public bool triggerByCollision;
+   // public bool triggerByCollision;
 
+ //   public bool spawnable;
+    private Vector3 tPosition;
 
+    public Quaternion AutoSetRotation { get; private set; }
+
+    private Vector3 myVector;
 
     private void Awake()
     {
@@ -27,17 +34,34 @@ public class GrowGrass : MonoBehaviour
         activeTerrian = GameObject.Find("Terrain");
     }
 
+
+    /// <summary>
+    /// Checks if is TRIGGER ENTER 
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "Grass")
+        {
 
-            if (other.gameObject == activeTerrian)
+        }
+        else if (other.gameObject == activeTerrian)
+        {
+         //   spawnable = true;
+
+
+            int terrainTextureIndex = terrainDetector.GetActiveTerrainTextureIdx(transform.position);
+
+
+            if (tPosition != grassSpawnPoint.transform.position)
             {
-                int terrainTextureIndex = terrainDetector.GetActiveTerrainTextureIdx(transform.position);
-
                 switch (terrainTextureIndex)
                 {
                     case 0:
-                        print("TOUCHING GRASS");
+                        Instantiate(grass, grassSpawnPoint.transform.position, grassSpawnPoint.transform.rotation);
+                        tPosition = grassSpawnPoint.transform.position;
+                        AutoSetRotation = grassSpawnPoint.transform.rotation;
+                        print("TOUCHING Grass");
                         break;
                     case 1:
                         print("TOUCHING Dirt");
@@ -47,21 +71,38 @@ public class GrowGrass : MonoBehaviour
                         break;
                 }
             }
-        
+        }
     }
 
+
+    /// <summary>
+    /// CHecks to see if using SOLID PARTILCE Colliosn
+    /// </summary>
+    /// <param name="other"></param>
     private void OnParticleCollision(GameObject other)
     {
-      
-            if (other.gameObject == activeTerrian)
-            {
-                int terrainTextureIndex = terrainDetector.GetActiveTerrainTextureIdx(transform.position);
+        if (other.gameObject.tag == "Grass")
+        {
 
+        }
+        else if (other.gameObject == activeTerrian)
+        {
+       //     spawnable = true;
+
+         
+            int terrainTextureIndex = terrainDetector.GetActiveTerrainTextureIdx(transform.position);
+
+
+            if(tPosition != grassSpawnPoint.transform.position)
+            {
                 switch (terrainTextureIndex)
                 {
                     case 0:
-                    Instantiate(grass, transform.position, transform.rotation);
-                    break;
+                        Instantiate(grass, grassSpawnPoint.transform.position, grassSpawnPoint.transform.rotation);
+                        tPosition = grassSpawnPoint.transform.position;
+                        AutoSetRotation = grassSpawnPoint.transform.rotation;
+                        print("TOUCHING Grass");
+                        break;
                     case 1:
                         print("TOUCHING Dirt");
                         break;
@@ -69,15 +110,19 @@ public class GrowGrass : MonoBehaviour
                         print("TOUCHING NOTHING");
                         break;
                 }
-            }
-       
+            }    
+        }    
     }
 
 
+
+
+    /// <summary>
+    /// Checks to see if SOILID Collsion is taking place
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
-     
-
         if(collision.gameObject == activeTerrian)
         {
             int terrainTextureIndex = terrainDetector.GetActiveTerrainTextureIdx(transform.position);
