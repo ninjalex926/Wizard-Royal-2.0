@@ -400,6 +400,10 @@
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\TeleporterC.cs" />
     <Compile Include="Assets\EnemyWaveManager.cs" />
     <Compile Include="Assets\KCCounter.cs" />
+    <Compile Include="Assets\CheckTerrainTexture.cs" />
+    <Compile Include="Assets\TerrainManager.cs" />
+    <Compile Include="Assets\TerrainDetector.cs" />
+    <Compile Include="Assets\GrowGrass.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Emerald AI\Credit\Credit.txt" />
@@ -408,6 +412,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Shaders\ProjectorLight.shader" />
      <None Include="Assets\Prefabs\(Prefab) Crystals\TranslucentCrystals\Resources\Shaders\SkyboxProceduralDesaturated.shader" />
+     <None Include="Assets\VFX\AN_Vegetation.shader" />
      <None Include="Assets\Shaders\ProjectorMultiply.shader" />
      <None Include="Assets\Prefabs\(Prefab) Crystals\TranslucentCrystals\Readme.txt" />
      <None Include="Assets\Emerald AI\Demo Source\AI Models\MeshSmith\ToonMonsterII\Toon Demon\Mesh\readMe.txt" />

@@ -18,11 +18,17 @@ public class SpellCollisions : MonoBehaviour
 
     public ABC_StateManager stateManager;
 
+    private TerrainDetector td;
+
+    public GameObject tree;
+
+    public bool isTreeFire;
+
     public void Start()
     {
             player = GameObject.FindWithTag("Player");
 
-            stateManager = player.GetComponent<ABC_StateManager>();
+            stateManager = player.GetComponent<ABC_StateManager>();         
     }
 
     /// <summary>
@@ -35,8 +41,19 @@ public class SpellCollisions : MonoBehaviour
         {
             if (elementType == "Fire")
             {
-                player.GetComponent<ABC_StateManager>().AdjustHealth(-0.1f);
-                print("Player is COLLDING DO DAMAGE");
+                if(isTreeFire)
+                {
+                    if (tree.GetComponent<FireScript>().isBurning)
+                    {
+                        player.GetComponent<ABC_StateManager>().AdjustHealth(-0.1f);
+                        print("Player is COLLDING DO DAMAGE");
+                    }
+                }
+                else
+                {
+                    player.GetComponent<ABC_StateManager>().AdjustHealth(-0.1f);
+                    print("Player is COLLDING DO DAMAGE");
+                }
             }
         }
 
@@ -101,7 +118,7 @@ public class SpellCollisions : MonoBehaviour
             if (elementType == "Water")
             {
 
-                Destroy(other.gameObject);
+             //   Destroy(other.gameObject);
 
                 float x = this.gameObject.transform.position.x;
 
