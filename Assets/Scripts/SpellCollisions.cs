@@ -16,11 +16,13 @@ public class SpellCollisions : MonoBehaviour
 
     private Transform trans;
 
-    public ABC_StateManager staeMan;
+    public ABC_StateManager stateManager;
 
     public void Start()
     {
             player = GameObject.FindWithTag("Player");
+
+            stateManager = player.GetComponent<ABC_StateManager>();
     }
 
     /// <summary>
@@ -34,6 +36,7 @@ public class SpellCollisions : MonoBehaviour
             if (elementType == "Fire")
             {
                 player.GetComponent<ABC_StateManager>().AdjustHealth(-0.1f);
+                print("Player is COLLDING DO DAMAGE");
             }
         }
 

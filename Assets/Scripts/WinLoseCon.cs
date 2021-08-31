@@ -1,16 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿///////////////////////////////////////////////////
+//// Wave Controler
+///Win Lose COoditiopns
+/////////////////////////////
+
+
 using UnityEngine;
 
 public class WinLoseCon : MonoBehaviour
 {
+
+
+
   public  ABC_StateManager player_ABCSM;
 
-  public ABC_StateManager enemy_ABCSM;
+ // public ABC_StateManager enemy_ABCSM;
 
-   
+  public bool battleActive;
 
- 
+  public GameObject[] enemyGroups;
+
+
+    public int waveNum;
+
+    public int currentKC;
+
+    public int waveKCGoal;
+
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -24,10 +42,10 @@ public class WinLoseCon : MonoBehaviour
 
       
 
-        if (enemy_ABCSM.currentHealth <= 0)
-        {
-            print("YOU Win");
-        }
+      //  if (enemy_ABCSM.currentHealth <= 0)
+   //     {
+    //        print("YOU Win");
+    //    }
 
 
        //    print(enemy_ABCSM.currentHealth);

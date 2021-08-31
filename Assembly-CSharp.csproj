@@ -103,6 +103,7 @@
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\ShowEnemyHealthC.cs" />
     <Compile Include="Assets\Scripts\Roller Ball Scripts\BallUserControl.cs" />
     <Compile Include="Assets\Scripts\Camera Scripts\AutoCam.cs" />
+    <Compile Include="Assets\Enemy_Spawner.cs" />
     <Compile Include="Assets\Emerald AI\Scripts\Character Controller\EmeraldAICharacterController.cs" />
     <Compile Include="Assets\Scripts\CustomEventEditor.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\QuestSystem\SpawnFromQuestC.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Assets\Emerald AI\Scripts\Components\VisibilityCheckDelay.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\EventSystemScript\FadeImage.cs" />
     <Compile Include="Assets\Scripts\(Script) DemoScripts\DisplayController.cs" />
+    <Compile Include="Assets\Destructible.cs" />
     <Compile Include="Assets\Emerald AI\Scripts\Components\LocationBasedDamage.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\EventSystemScript\EventActivator.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\DropItemC.cs" />
@@ -251,6 +253,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\AreaDamageSkillC.cs" />
     <Compile Include="Assets\Emerald AI\Scripts\Example Systems\MoveToMousePosition.cs" />
+    <Compile Include="Assets\Health_Orb_Spawner.cs" />
     <Compile Include="Assets\Shared\Scripts\SimpleCharacterMotor.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\CanvasUI\ShopCanvasC.cs" />
     <Compile Include="Assets\Scripts\Restarter.cs" />
@@ -395,7 +398,8 @@
     <Compile Include="Assets\Scripts\B Raycasting Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\(Script) Utility\AutoMobileShaderSwitch.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\TeleporterC.cs" />
-    <Compile Include="Assets\Destructible.cs" />
+    <Compile Include="Assets\EnemyWaveManager.cs" />
+    <Compile Include="Assets\KCCounter.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Emerald AI\Credit\Credit.txt" />
