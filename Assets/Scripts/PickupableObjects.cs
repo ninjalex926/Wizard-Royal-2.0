@@ -21,13 +21,26 @@ public class PickupableObjects : MonoBehaviour
 
     public bool destroyOnTrigger;
 
+    public ABC_Controller abcCon;
 
     public bool autoPickup;
+
+     public ABC_Ability waterball;
+
+     public int waterballID;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        playerRef = GameObject.Find("PlayerCharacter(First Person)");
+        playerRef = GameObject.FindGameObjectWithTag("Player");
+
+        abcCon = playerRef.GetComponent<ABC_Controller>();
+
+        waterball = abcCon.FindAbility(1123752);
+
+     
     }
 
     // Update is called once per frame
@@ -71,6 +84,22 @@ public class PickupableObjects : MonoBehaviour
             // If t collides with player
             if (other.tag == "Player")
             {
+
+                print("IS COLLIDNG");
+
+                //     abcCon.EnableAbility(waterball);
+
+                
+;               abcCon.EnableAbility(1123752);
+               
+
+
+
+                
+         
+                print(waterball.name);
+
+
                 if (healPlayer)
                 {
                     RestorePlayerHealth(healthRestore);
