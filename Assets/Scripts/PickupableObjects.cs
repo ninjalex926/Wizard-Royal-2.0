@@ -23,6 +23,9 @@ public class PickupableObjects : MonoBehaviour
 
     public ABC_Controller abcCon;
 
+    public ABC_IconController abcUi;
+
+
     public bool autoPickup;
 
      public ABC_Ability waterball;
@@ -37,6 +40,8 @@ public class PickupableObjects : MonoBehaviour
         playerRef = GameObject.FindGameObjectWithTag("Player");
 
         abcCon = playerRef.GetComponent<ABC_Controller>();
+
+       
 
         waterball = abcCon.FindAbility(1123752);
 
@@ -93,7 +98,7 @@ public class PickupableObjects : MonoBehaviour
 ;               abcCon.EnableAbility(1123752);
                
 
-
+               
 
                 
          

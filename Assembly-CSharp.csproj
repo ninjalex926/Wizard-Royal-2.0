@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\FPC Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Scripts\(Script) ABC\ABC-Classes\ABC_IEntity.cs" />
     <Compile Include="Assets\Scripts\(Script) ParticleSystems Scripts\ExplosionPhysicsForce.cs" />
+    <Compile Include="Assets\KCCounter.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\EventSystemScript\SpawnConditionBool.cs" />
     <Compile Include="Assets\Emerald AI\Scripts\Components\EmeraldAINeedsSystem.cs" />
     <Compile Include="Assets\Emerald AI\Scripts\Example Systems\DamageAIByAngle.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\QuestSystem\SpawnFromQuestC.cs" />
     <Compile Include="Assets\Scripts\(Script) ABC\ABC-Integrations\GameCreator\ActionABCToggleAbility.cs" />
     <Compile Include="Assets\Scripts\(Script) Utility\TimedObjectActivator.cs" />
+    <Compile Include="Assets\CheckTerrainTexture.cs" />
     <Compile Include="Assets\Emerald AI\Scripts\Components\VisibilityCheckDelay.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\EventSystemScript\FadeImage.cs" />
     <Compile Include="Assets\Scripts\(Script) DemoScripts\DisplayController.cs" />
@@ -157,6 +159,7 @@
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\SetAnimationSpeedC.cs" />
     <Compile Include="Assets\Emerald AI\Scripts\Components\LocationBasedDamageArea.cs" />
     <Compile Include="Assets\Scripts\(Script) Utility\CameraRefocus.cs" />
+    <Compile Include="Assets\TerrainManager.cs" />
     <Compile Include="Assets\Scripts\(Script) Utility\PlatformSpecificContent.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCharacter Scripts\ThirdPersonCharacter.cs" />
     <Compile Include="Assets\Scripts\Sample Example Scripts\CameraSwitch.cs" />
@@ -290,17 +293,20 @@
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\MinimapCameraC.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\RotateObjectC.cs" />
     <Compile Include="Assets\Scripts\HitEffectInstance.cs" />
+    <Compile Include="Assets\GrowGrass.cs" />
     <Compile Include="Assets\Scripts\(Script) Utility\DynamicShadowSettings.cs" />
     <Compile Include="Assets\Emerald AI\Scripts\Components\EmeraldAIFactionData.cs" />
     <Compile Include="Assets\Shared\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\StatusC.cs" />
     <Compile Include="Assets\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\Scenes\Demo scenes\DemoShooting.cs" />
+    <Compile Include="Assets\TerrainDetector.cs" />
     <Compile Include="Assets\Emerald AI\Scripts\Components\EmeraldAIInitializer.cs" />
     <Compile Include="Assets\Scripts\(Script) Utility\SimpleActivatorMenu.cs" />
     <Compile Include="Assets\Emerald AI\Scripts\Components\EmeraldAIProjectileTimeout.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\AiNavMesh.cs" />
     <Compile Include="Assets\Emerald AI\Scripts\Example Systems\RaycastHitAI.cs" />
+    <Compile Include="Assets\EnemyWaveManager.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\QuestSystem\QuestDataC.cs" />
     <Compile Include="Assets\UI\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\UpperBodyAnimationMixC.cs" />
@@ -398,12 +404,7 @@
     <Compile Include="Assets\Scripts\B Raycasting Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\(Script) Utility\AutoMobileShaderSwitch.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\TeleporterC.cs" />
-    <Compile Include="Assets\EnemyWaveManager.cs" />
-    <Compile Include="Assets\KCCounter.cs" />
-    <Compile Include="Assets\CheckTerrainTexture.cs" />
-    <Compile Include="Assets\TerrainManager.cs" />
-    <Compile Include="Assets\TerrainDetector.cs" />
-    <Compile Include="Assets\GrowGrass.cs" />
+    <Compile Include="Assets\BookOnOff.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Emerald AI\Credit\Credit.txt" />
