@@ -38,11 +38,21 @@ public class Enemy_Spawner : MonoBehaviour
         }
 
         spawnerCurrentTime = startingSpawnerTime;
+
+        print(spawnerCurrentTime);
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (spawnerCurrentTime > 0)
+        {
+            // Timer count down
+            spawnerCurrentTime -= 1 * Time.deltaTime;
+        }
+
+
         // Is connected to Wave Manager
         if (connectWave)
         {
@@ -55,14 +65,16 @@ public class Enemy_Spawner : MonoBehaviour
                     spawnerCurrentTime = startingSpawnerTime;
                 }
             }
-
-            if (spawnerCurrentTime > 0)
+        }
+        else
+        {
+            // Not Connctd to Wave Manager
+            if (spawnerCurrentTime <= 0)
             {
-                // Timer count down
-                spawnerCurrentTime -= 1 * Time.deltaTime;
+                Instantiate(enemy1, transform.position, transform.rotation);
+                ++enemyCount;
+                spawnerCurrentTime = startingSpawnerTime;
             }
         }
-
-        // Not Connctd to Wave Manager
     }
 }

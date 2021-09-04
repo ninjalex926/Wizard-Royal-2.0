@@ -23,12 +23,17 @@ public class PickupableObjects : MonoBehaviour
 
     public ABC_Controller abcCon;
 
-    public ABC_IconController abcUi;
+    public ABC_IconController abcIconCon;
 
+    public ABC_IconUI abcUi;
+
+  
+
+    public ABC_Ability waterball;
 
     public bool autoPickup;
 
-     public ABC_Ability waterball;
+
 
      public int waterballID;
 
@@ -41,11 +46,18 @@ public class PickupableObjects : MonoBehaviour
 
         abcCon = playerRef.GetComponent<ABC_Controller>();
 
-       
+      //  abcUi = playerRef.GetComponent<ABC_IconUI>();
 
         waterball = abcCon.FindAbility(1123752);
 
+        waterballID = waterball.abilityID;
+
      
+
+
+        //     abcUi.AddIconToOriginator();
+
+
     }
 
     // Update is called once per frame
@@ -95,7 +107,7 @@ public class PickupableObjects : MonoBehaviour
                 //     abcCon.EnableAbility(waterball);
 
                 
-;               abcCon.EnableAbility(1123752);
+;          //     abcCon.EnableAbility(1123752);
                
 
                
