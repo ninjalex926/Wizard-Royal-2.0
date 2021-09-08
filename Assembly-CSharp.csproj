@@ -375,6 +375,7 @@
     <Compile Include="Assets\Scripts\(Script) Utility\FPSCounter.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\Hook.cs" />
     <Compile Include="Assets\Scripts\(Script) ABC\ABC-Integrations\GameCreator\ActionABCToggleWeapon.cs" />
+    <Compile Include="Assets\BookOnOff.cs" />
     <Compile Include="Assets\Scripts\(Script) DemoScripts\FlyCam.cs" />
     <Compile Include="Assets\Shared\Ramps\Runtime\RampAsset.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\AttackTriggerC.cs" />
@@ -404,7 +405,7 @@
     <Compile Include="Assets\Scripts\B Raycasting Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\(Script) Utility\AutoMobileShaderSwitch.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\TeleporterC.cs" />
-    <Compile Include="Assets\BookOnOff.cs" />
+    <Compile Include="Assets\ABCUI_SpellController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Emerald AI\Credit\Credit.txt" />

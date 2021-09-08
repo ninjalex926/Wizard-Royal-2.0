@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickupableObjects : MonoBehaviour
 {
 
-    public GameObject playerRef;
+ 
 
     public int healthRestore;
 
@@ -21,23 +21,14 @@ public class PickupableObjects : MonoBehaviour
 
     public bool destroyOnTrigger;
 
+
+    //    public ABC_IconController abcIconCon;
+
+    public GameObject playerRef;
+
     public ABC_Controller abcCon;
 
-    public ABC_IconController abcIconCon;
-
-    public ABC_IconUI abcUi;
-
-  
-
-    public ABC_Ability waterball;
-
     public bool autoPickup;
-
-
-
-     public int waterballID;
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -45,17 +36,6 @@ public class PickupableObjects : MonoBehaviour
         playerRef = GameObject.FindGameObjectWithTag("Player");
 
         abcCon = playerRef.GetComponent<ABC_Controller>();
-
-      //  abcUi = playerRef.GetComponent<ABC_IconUI>();
-
-        waterball = abcCon.FindAbility(1123752);
-
-        waterballID = waterball.abilityID;
-
-     
-
-
-        //     abcUi.AddIconToOriginator();
 
 
     }
@@ -103,18 +83,6 @@ public class PickupableObjects : MonoBehaviour
             {
 
                 print("IS COLLIDNG");
-
-                //     abcCon.EnableAbility(waterball);
-
-                
-;          //     abcCon.EnableAbility(1123752);
-               
-
-               
-
-                
-         
-                print(waterball.name);
 
 
                 if (healPlayer)
