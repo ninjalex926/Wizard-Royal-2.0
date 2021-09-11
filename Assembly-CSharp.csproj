@@ -361,6 +361,7 @@
     <Compile Include="Assets\Scripts\Scriptable Objects\RaycastAbility.cs" />
     <Compile Include="Assets\Scripts\(Script) DemoScripts\AnimatorRandomState.cs" />
     <Compile Include="Assets\Scripts\Environment Water Scripts\WaterTile.cs" />
+    <Compile Include="Assets\ABCUI_SpellController.cs" />
     <Compile Include="Assets\Scripts\(Script) ABC\ABC-Classes\ABC_IEntityBase.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\AutoCalculateStatus.cs" />
     <Compile Include="Assets\Scripts\(Script) ABC\ABC-MiscScripts\ABC_FreezePosition.cs" />
@@ -405,7 +406,6 @@
     <Compile Include="Assets\Scripts\B Raycasting Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\(Script) Utility\AutoMobileShaderSwitch.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\TeleporterC.cs" />
-    <Compile Include="Assets\ABCUI_SpellController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Emerald AI\Credit\Credit.txt" />

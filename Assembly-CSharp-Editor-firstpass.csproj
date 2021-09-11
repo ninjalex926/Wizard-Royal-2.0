@@ -197,6 +197,22 @@
     <Compile Include="Assets\Plugins\GameCreator\Characters\Editor\PlayerCharacterEditor.cs" />
     <Compile Include="Assets\Plugins\GameCreator\Core\Editor\UI\InputFieldVariableEditor.cs" />
     <Compile Include="Assets\Plugins\GameCreator\Core\Editor\Preferences\PreferencesDetachWindow.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\LootTable\LootTableEditor.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\ItemEditor.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\Container\InitDataPD.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\ItemHolder\ItemHolderPropertyDrawer.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\Equipment\InventoryMultiItemTypeAttributePD.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\Equipment\InventorySingleItemTypeAttributePD.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\InventoryManagerEditor.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\Equipment\PlayerEquipmentEditor.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\Equipment\CharacterEquipmentEditor.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\ItemHolder\ItemHolderPropertyDrawerWindow.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\DatabaseInventoryEditor.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\Merchant\MerchantEditor.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\LootTable\LootPD.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\Merchant\WarePD.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\RecipeEditor.cs" />
+    <Compile Include="Assets\Plugins\GameCreator\Inventory\Editor\Container\ContainerEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
