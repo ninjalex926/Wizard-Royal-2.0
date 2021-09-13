@@ -299,7 +299,7 @@
     <Compile Include="Assets\Shared\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\StatusC.cs" />
     <Compile Include="Assets\Scripts\MenuSceneLoader.cs" />
-    <Compile Include="Assets\Scenes\Demo scenes\DemoShooting.cs" />
+    <Compile Include="Assets\Scenes\(Other) Scenes\Demo scenes\DemoShooting.cs" />
     <Compile Include="Assets\Scripts\TerrainDetector.cs" />
     <Compile Include="Assets\Emerald AI\Scripts\Components\EmeraldAIInitializer.cs" />
     <Compile Include="Assets\Scripts\(Script) Utility\SimpleActivatorMenu.cs" />
@@ -406,11 +406,13 @@
     <Compile Include="Assets\Scripts\B Raycasting Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\(Script) Utility\AutoMobileShaderSwitch.cs" />
     <Compile Include="Assets\Scripts\(Script) ActionRPGKit\TeleporterC.cs" />
+    <Compile Include="Assets\LoadScene.cs" />
+    <Compile Include="Assets\Scripts\MainPauseMenu.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Emerald AI\Credit\Credit.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-     <None Include="Assets\Scenes\Demo scenes\Readme.txt" />
+     <None Include="Assets\Scenes\(Other) Scenes\Demo scenes\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Shaders\ProjectorLight.shader" />
      <None Include="Assets\Prefabs\(Prefab) Crystals\TranslucentCrystals\Resources\Shaders\SkyboxProceduralDesaturated.shader" />
