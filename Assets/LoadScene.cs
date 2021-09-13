@@ -8,7 +8,7 @@ public class LoadScene :MonoBehaviour
 
     public int levelNum;
 
-
+    public GameObject pauseController;
 
     public void Start()
     {
@@ -21,5 +21,6 @@ public class LoadScene :MonoBehaviour
      //   SceneManager.LoadScene(SceneManager.GetSceneAt(levelNum).name);
 
         SceneManager.LoadScene(levelNum);
+        pauseController.GetComponent<MainPauseMenu>().OnMenuStatusChange();
     }
 }
