@@ -8,7 +8,7 @@ public class LoadScene :MonoBehaviour
 
     public int levelNum;
 
-    public GameObject pauseController;
+    public GameObject pauseController; 
 
     public void Start()
     {

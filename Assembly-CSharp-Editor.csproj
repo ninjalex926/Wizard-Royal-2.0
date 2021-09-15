@@ -85,6 +85,14 @@
     <Compile Include="Assets\Scripts\Editor\Water\Water4\WaterBaseEditor.cs" />
     <Compile Include="Assets\Scripts\(Script) ABC\ABC-Components\Editor\ABC_ExportedAbilities_Editor.cs" />
     <Compile Include="Assets\Scripts\(Script) ABC\ABC-Components\Editor\ABC_WeaponPickUp_Editor.cs" />
+    <Compile Include="Assets\Particles\KriptoFX\Realistic Effects Pack v1\PostEffects\PC\Bloom\Editor\BloomEditor.cs" />
+    <Compile Include="Assets\Particles\KriptoFX\Realistic Effects Pack v1\PostEffects\PC\Common\Editor\FieldFinder.cs" />
+    <Compile Include="Assets\Particles\KriptoFX\Realistic Effects Pack v1\PostEffects\PC\Common\Editor\MinDrawer.cs" />
+    <Compile Include="Assets\Particles\KriptoFX\Realistic Effects Pack v1\PostEffects\PC\Common\Editor\EditorGUIHelper.cs" />
+    <Compile Include="Assets\Particles\KriptoFX\Realistic Effects Pack v1\Scripts\Editor\CustomShaderGUI.cs" />
+    <Compile Include="Assets\Particles\KriptoFX\Realistic Effects Pack v1\PostEffects\Mobile\Editor\RFX1LayerUtilsDistortion.cs" />
+    <Compile Include="Assets\Particles\KriptoFX\Realistic Effects Pack v1\Scripts\Editor\RFX1_CustomMaterialInspectorParticle.cs" />
+    <Compile Include="Assets\Particles\KriptoFX\Realistic Effects Pack v1\PostEffects\PC\Bloom\Editor\BloomGraphDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
