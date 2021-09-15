@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Skybox_Night_Desaturated
-  m_Shader: {fileID: 4800000, guid: f0e6432d0c161f0438eaa5961f74bd95, type: 3}
+  m_Shader: {fileID: 4800000, guid: 2509b5f019df4214985850d1f08b70a9, type: 3}
   m_ShaderKeywords: _SUNDISK_HIGH_QUALITY
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
