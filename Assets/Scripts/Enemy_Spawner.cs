@@ -60,9 +60,27 @@ public class Enemy_Spawner : MonoBehaviour
             {
                 if (spawnerCurrentTime <= 0)
                 {
-                    Instantiate(enemy1, transform.position, transform.rotation);
-                    ++enemyCount;
-                    spawnerCurrentTime = startingSpawnerTime;
+
+                    enemyToSpawn = Random.Range(0, 2);
+
+                    switch(enemyToSpawn)
+                    {
+                        case 0:
+                            Instantiate(enemy1, transform.position, transform.rotation);
+                            ++enemyCount;
+                            spawnerCurrentTime = startingSpawnerTime;
+                            break;
+
+                        case 1:
+                            Instantiate(enemy2, transform.position, transform.rotation);
+                            ++enemyCount;
+                            spawnerCurrentTime = startingSpawnerTime;
+                            break;
+
+                        default:
+                            break;
+
+                    }                                                                 
                 }
             }
         }
