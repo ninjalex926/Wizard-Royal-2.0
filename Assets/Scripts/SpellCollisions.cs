@@ -5,7 +5,6 @@ using UnityEngine;
 public class SpellCollisions : MonoBehaviour
 {
   
-
     //  The elemental type for this spell
     [Tooltip(" The elemental type for this spell")]
     public string elementType;
@@ -123,8 +122,16 @@ public class SpellCollisions : MonoBehaviour
 
             if (elementType == "Water")
             {
+                print("FIRE TUYCHING WATER DESTROY OTHER");
+            }
+        }
 
-             //   Destroy(other.gameObject);
+        if (other.gameObject.tag.Equals("WaterSpell"))
+        {
+
+            if (elementType == "Fire")
+            {
+                print("FIRE TUYCHING WATER DESTROY SELF");
 
                 float x = this.gameObject.transform.position.x;
 
@@ -134,7 +141,11 @@ public class SpellCollisions : MonoBehaviour
 
                 Instantiate(steamObj, new Vector3(x, y, z), Quaternion.identity);
 
+        //        Destroy(gameObject);
+
             }
+
+
         }
     }
 }

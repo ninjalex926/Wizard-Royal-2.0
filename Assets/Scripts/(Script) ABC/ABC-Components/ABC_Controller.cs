@@ -8824,7 +8824,7 @@ public class ABC_Controller : MonoBehaviour {
     public void AddToDiagnosticLog(string TextLog) {
 
         if (this.logDiagnosticToConsole)
-            Debug.Log(TextLog);
+
 
         //If turned on then write to the diagnostic log
         if (this.enableDiagnosticLogging)
