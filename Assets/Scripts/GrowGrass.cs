@@ -57,14 +57,15 @@ public class GrowGrass : MonoBehaviour
                 switch (terrainTextureIndex)
                 {
                     case 0:
+                        print("TOUCHING NOTHING");
+                        break;
+                    case 1:
+                        print("TOUCHING gras");
                         Instantiate(grass, grassSpawnPoint.transform.position, grassSpawnPoint.transform.rotation);
 
                         tPosition = grassSpawnPoint.transform.position;
                         AutoSetRotation = grassSpawnPoint.transform.rotation;
                         print("TOUCHING Grass");
-                        break;
-                    case 1:
-                        print("TOUCHING Dirt");
                         break;
                     default:
                         print("TOUCHING NOTHING");
